@@ -25,4 +25,11 @@ jobs:
         with:
           push: true
           tags: wideglide/fact_extractor:latest,wideglide/fact_extractor:focal
+      -
+        name: Run tests
+        uses: addnab/docker-run-action@v3
+        with:
+          image: wideglide/fact_extractor:focal
+          shell: bash
+          run: pytest
 

@@ -155,7 +155,7 @@ DEPENDENCIES = {
         'github': [
             ('kartone/sasquatch', ['./build.sh']),
             ('ReFirmLabs/binwalk', ['sudo python3 setup.py install']),
-            ('svidovich/jefferson-3', ['sudo python3 setup.py install']),
+            ('sviehb/jefferson', ['sudo python3 setup.py install']),
             ('rampageX/firmware-mod-kit', ['(cd src && sh configure && make)', 'cp src/yaffs2utils/unyaffs2 src/untrx src/tpl-tool/src/tpl-tool ../../bin/'])
         ]
     }
@@ -170,6 +170,7 @@ def install_dependencies(dependencies):
     pip3_install_packages(*pip3)
     for repo in github:
         install_github_project(*repo)
+    pip3_install_packages(*pip3)
 
 
 def main(distribution):
