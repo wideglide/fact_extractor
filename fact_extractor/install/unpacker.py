@@ -143,7 +143,7 @@ DEPENDENCIES = {
             'git+https://github.com/fkie-cad/fact_helper_file.git',
             'patool',
             'archmage',
-            # binwalk
+            'binwalk',
             'pyqtgraph',
             'capstone',
             'cstruct==1.8',
